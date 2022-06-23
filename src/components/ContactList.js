@@ -7,6 +7,7 @@ import {
     ListItemAvatar,
     Avatar,
     CardContent,
+    Typography,
     }from '@mui/material';
     import ContactsIcon from '@mui/icons-material/Contacts';
     import DeleteIcon from '@mui/icons-material/Delete';
@@ -29,9 +30,11 @@ function ContactList(props) {
                   <ContactsIcon />
                 </Avatar>
               </ListItemAvatar>
+              <Typography variant='h6' fontWeight='300' fontSize='1rem'>
               {contact.name} <br />
               {contact.email} <br />
               {contact.phone}
+              </Typography>
             </ListItem>
           </List>
         );
