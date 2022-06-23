@@ -8,13 +8,15 @@ function App() {
     {
       id: '1',
       name: 'Farhan',
-      email: 'farhan@gmail.com'
+      email: 'farhan@gmail.com',
+      phone: '01774257995'
     },
-    {
+    /* {
       id: '1',
       name: 'Alams',
-      email: 'alams@gmail.com'
-    },
+      email: 'alams@gmail.com',
+      phone: '01774257995'
+    }, */
   ];
   
   return (
