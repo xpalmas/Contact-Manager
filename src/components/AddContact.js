@@ -5,7 +5,7 @@ import React from 'react'
 function AddContact() {
   return (
     <div style={{marginTop: '20px'}}>
-        <Card style={{maxWidth: 800, boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px', margin: '0 auto', padding: '20px 5px'}}>
+        <Card style={{maxWidth: 800, boxShadow: 'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px', margin: '0 auto', padding: '20px 5px'}}>
             <CardContent>
                 <Typography gutterBottom variant='h5'>Fill out all the informations</Typography>
                 <form>

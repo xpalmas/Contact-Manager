@@ -16,33 +16,29 @@ function ContactList(props) {
   
     const showContactList = props.contacts.map((contact) => {
         return (
-            <Card>
-                <CardContent>
-                <List>
-                            <ListItem
-                                secondaryAction={
-                                    <IconButton edge="end" aria-label="delete">
-                                    <DeleteIcon />
-                                    </IconButton>
-                                }
-                            >
-                                <ListItemAvatar>
-                                    <Avatar>
-                                    <ContactsIcon />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                    {contact.name} <br/>
-                                    {contact.email} <br/>
-                                    {contact.phone}
-                            </ListItem>,
-                        </List>
-                </CardContent>
-            </Card>
+          <List style={{borderBottom: '1px solid rgba(0, 0, 0, .5)'}}>
+            <ListItem
+              secondaryAction={
+                <IconButton edge="end" aria-label="delete">
+                  <DeleteIcon />
+                </IconButton>
+              }
+            >
+              <ListItemAvatar>
+                <Avatar>
+                  <ContactsIcon />
+                </Avatar>
+              </ListItemAvatar>
+              {contact.name} <br />
+              {contact.email} <br />
+              {contact.phone}
+            </ListItem>
+          </List>
         );
     })
 
     return (
-    <div style={{marginTop: '40px', maxWidth: 800, boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px', margin: '0 auto', padding: '20px 5px'}}>{showContactList}</div>
+    <div style={{boxShadow: 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px', maxWidth: 800, margin: '20px auto 0'}}>{showContactList}</div>
   )
 }
 
