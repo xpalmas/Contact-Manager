@@ -12,11 +12,15 @@ class AddContact extends React.Component {
 
     add =(e)=>{
         e.preventDefault();
-        if(this.state.firstName=== '' && this.state.lastName=== '' && this.state.email=== '' && this.state.phone=== ''){
+        if(this.state.firstName=== '' || this.state.lastName=== '' || this.state.email=== '' || this.state.phone=== ''){
             alert('All the fields are mandatory!');
             return
         }
-        console.log(this.state)
+        this.props.addContactHandler(this.state);
+        this.setState({firstName:'',
+        lastName:'',
+        email:'',
+        phone:'',});
     }
     render(){
 
@@ -66,7 +70,7 @@ class AddContact extends React.Component {
                                         variant='outlined'
                                         fullWidth
                                         required
-                                        value={this.state.tel}
+                                        value={this.state.phone}
                                     />
                                 </Grid>
                                 <Grid xs={12} item>

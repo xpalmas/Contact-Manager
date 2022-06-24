@@ -24,9 +24,7 @@ function ContactCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {firstName}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
+            {firstName} &nbsp;
             {lastName}
           </Typography>
           <Typography variant="body2" color="text.secondary">
