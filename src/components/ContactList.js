@@ -1,48 +1,38 @@
 import React from 'react'
 import {
     Card,
-    List,
-    ListItem,
-    IconButton,
-    ListItemAvatar,
-    Avatar,
     CardContent,
-    Typography,
+    Grid,
     }from '@mui/material';
-    import ContactsIcon from '@mui/icons-material/Contacts';
-    import DeleteIcon from '@mui/icons-material/Delete';
+import ContactCard from './ContactCard';
 
 
 function ContactList(props) {
   
     const showContactList = props.contacts.map((contact) => {
         return (
-          <List style={{borderBottom: '1px solid rgba(0, 0, 0, .5)'}}>
-            <ListItem
-              secondaryAction={
-                <IconButton edge="end" aria-label="delete">
-                  <DeleteIcon />
-                </IconButton>
-              }
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <ContactsIcon />
-                </Avatar>
-              </ListItemAvatar>
-              <Typography variant='h6' fontWeight='300' fontSize='1rem'>
-              {contact.name} <br />
-              {contact.email} <br />
-              {contact.phone}
-              </Typography>
-            </ListItem>
-          </List>
+               <ContactCard contact={contact}></ContactCard>
         );
     })
 
     return (
-    <div style={{boxShadow: 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px', maxWidth: 800, margin: '20px auto 0'}}>{showContactList}</div>
-  )
+      <Card
+        style={{
+          maxWidth: 800,
+          boxShadow:
+            "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
+          margin: "20px auto 0",
+          padding: "10px",
+          alignItems: 'center',
+        }}
+      >
+        <CardContent>
+          <Grid container spacing={1} direction="row">
+            {showContactList}
+          </Grid>
+        </CardContent>
+      </Card>
+    );
 }
 
 export default ContactList
